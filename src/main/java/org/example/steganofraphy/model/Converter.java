@@ -1,14 +1,13 @@
-package org.example.steganofraphy;
+package org.example.steganofraphy.model;
 
 public class Converter {
 
     public String convertTextToBinary(String text) {
-        String binaryText = text.chars()
-                .collect(StringBuilder::new,
-                        (sb, c) -> sb.append(String.format("%16s", Integer.toBinaryString(c)).replace(' ', '0')).append(' '),
-                        StringBuilder::append).toString();
-        return binaryText;
+        return text.chars().collect(StringBuilder::new,
+                (sb, c) -> sb.append(String.format("%16s", Integer.toBinaryString(c)).replace(' ', '0'))
+                        .append(' '), StringBuilder::append).toString();
     }
+
     public String convertBinaryToText(String text) {
         text = text.replaceAll(" ", "");
         StringBuilder decodedText = new StringBuilder();

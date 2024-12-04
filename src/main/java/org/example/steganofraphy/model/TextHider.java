@@ -1,11 +1,11 @@
-package org.example.steganofraphy;
+package org.example.steganofraphy.model;
 
 import lombok.Getter;
 
 import java.awt.image.BufferedImage;
 
+@Getter
 public class TextHider {
-    @Getter
     private int textLength;
 
     public BufferedImage hideTextInImage(BufferedImage image, String text) {

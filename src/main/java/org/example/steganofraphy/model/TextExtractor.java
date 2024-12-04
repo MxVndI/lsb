@@ -1,11 +1,11 @@
-package org.example.steganofraphy;
+package org.example.steganofraphy.model;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-public class TextExtracter {
+public class TextExtractor {
 
     public String extractText(File file, int lastInfoLength) throws IOException {
         BufferedImage image = ImageIO.read(file);
